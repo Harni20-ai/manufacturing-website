@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | IndusCore</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">INDUS<span class="text-accent">CORE</span></a>
+        </div>
+    </nav>
+
+    <main class="container section-padding" style="max-width: 900px;">
+        <div class="product-grid">
+            <!-- Login -->
+            <div class="bg-secondary p-5 border-radius-md border-color">
+                <h2 class="mb-4">Login</h2>
+                <form action="user-dashboard.html">
+                    <div class="form-group mb-3">
+                        <label>Username or Email</label>
+                        <input type="text" class="w-full p-3 bg-primary border-color text-primary" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Password</label>
+                        <input type="password" class="w-full p-3 bg-primary border-color text-primary" required>
+                    </div>
+                    <div class="mb-4 d-flex justify-between align-items-center">
+                        <label class="small"><input type="checkbox"> Remember me</label>
+                        <a href="#" class="text-accent small">Lost password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full">LOG IN</button>
+                </form>
+                <div class="mt-4 text-center">
+                    <a href="admin-dashboard.html" class="text-secondary small">Admin Login Demo <i class="fas fa-lock"></i></a>
+                </div>
+            </div>
+
+            <!-- Register -->
+            <div class="bg-secondary p-5 border-radius-md border-color">
+                <h2 class="mb-4">Register</h2>
+                <form action="user-dashboard.html">
+                    <div class="form-group mb-3">
+                        <label>Email Address</label>
+                        <input type="email" class="w-full p-3 bg-primary border-color text-primary" required>
+                    </div>
+                    <p class="text-secondary small mb-4">A password will be sent to your email address.</p>
+                    <p class="text-secondary small mb-4">Your personal data will be used to support your experience throughout this website.</p>
+                    <button type="submit" class="btn btn-outline w-full">REGISTER</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 IndusCore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

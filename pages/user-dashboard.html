@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard | IndusCore</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .user-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+        .user-nav {
+            background: var(--bg-secondary);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            height: fit-content;
+        }
+        .user-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            color: var(--text-secondary);
+            border-radius: var(--radius-sm);
+            margin-bottom: var(--space-xs);
+            transition: var(--transition-fast);
+        }
+        .user-nav-item:hover, .user-nav-item.active {
+            background: var(--bg-primary);
+            color: var(--accent-primary);
+        }
+        .order-history-card {
+            background: var(--bg-secondary);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            margin-bottom: var(--space-md);
+        }
+        @media (max-width: 1024px) {
+            .user-layout { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">INDUS<span class="text-accent">CORE</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="index.html" class="btn btn-outline">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container section-padding">
+        <div class="user-header mb-4">
+            <h1>Welcome, <span>John Doe</span></h1>
+            <p class="text-secondary">Manage your industrial orders and account settings.</p>
+        </div>
+
+        <div class="user-layout">
+            <aside class="user-nav">
+                <a href="#" class="user-nav-item active"><i class="fas fa-user"></i> Profile Management</a>
+                <a href="#" class="user-nav-item"><i class="fas fa-history"></i> Order History</a>
+                <a href="#" class="user-nav-item"><i class="fas fa-heart"></i> Saved Items</a>
+                <a href="#" class="user-nav-item"><i class="fas fa-envelope"></i> Messages</a>
+                <a href="#" class="user-nav-item"><i class="fas fa-cog"></i> Settings</a>
+                <a href="index.html" class="user-nav-item text-danger"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </aside>
+
+            <div class="user-content">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <small>Total Orders</small>
+                        <div class="h3">12</div>
+                    </div>
+                    <div class="stat-card">
+                        <small>Pending Delivery</small>
+                        <div class="h3">2</div>
+                    </div>
+                    <div class="stat-card">
+                        <small>Account Credit</small>
+                        <div class="h3">$5,240</div>
+                    </div>
+                </div>
+
+                <h3 class="mt-4 mb-3">Recent Orders</h3>
+                <div class="order-history-card">
+                    <div class="d-flex justify-between align-items-center mb-2">
+                        <strong>Order #8821</strong>
+                        <span class="badge badge-success">Delivered</span>
+                    </div>
+                    <div class="text-secondary small">Placed on: April 24, 2026</div>
+                    <div class="mt-2">1x Heavy Duty Gas Turbine V2</div>
+                    <div class="mt-2 text-right">
+                        <button class="btn btn-outline btn-sm">Track Order</button>
+                        <button class="btn btn-outline btn-sm">Invoice</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

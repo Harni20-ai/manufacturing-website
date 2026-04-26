@@ -1,0 +1,32 @@
+/* RTL Support for Industrial Manufacturing Template */
+
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .hero-image {
+    right: auto;
+    left: 0;
+}
+
+[dir="rtl"] .hero-image::after {
+    background: linear-gradient(to left, var(--bg-primary) 0%, rgba(15, 15, 15, 0.4) 100%);
+}
+
+[dir="rtl"] .nav-links {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .footer-links ul li a:hover {
+    padding-left: 0;
+    padding-right: 5px;
+}
+
+[dir="rtl"] .btn i {
+    margin-left: 0;
+    margin-right: 8px;
+}
+
+[dir="rtl"] .product-card .product-info {
+    text-align: right;
+}

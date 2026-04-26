@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | IndusCore Industrial E-commerce</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .shop-container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+        .filter-sidebar {
+            background: var(--bg-secondary);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            height: fit-content;
+        }
+        .filter-group {
+            margin-bottom: var(--space-xl);
+        }
+        .filter-group h4 {
+            font-size: 1rem;
+            margin-bottom: var(--space-md);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: var(--space-xs);
+        }
+        .filter-list li {
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .filter-list label {
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 1024px) {
+            .shop-container { grid-template-columns: 1fr; }
+            .filter-sidebar { display: none; } /* Could be a drawer on mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header (Same as index) -->
+    <div class="top-bar">
+        <div class="container">
+            <span><i class="fas fa-phone"></i> +1 (800) 555-INDUS</span>
+            <div class="top-links">
+                <a href="account.html">My Account</a>
+                <button id="theme-toggle" class="ml-2"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">INDUS<span class="text-accent">CORE</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="text-accent">Shop</a></li>
+                <li><a href="services.html">Categories</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i> 0</a>
+                <a href="checkout.html" class="btn btn-primary">Checkout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="section-padding bg-secondary">
+        <div class="container">
+            <h1>Industrial <span>Catalog</span></h1>
+            <p class="text-secondary">Browse through our extensive range of certified industrial components.</p>
+        </div>
+    </header>
+
+    <!-- Shop Content -->
+    <main class="container section-padding">
+        <div class="shop-container">
+            <!-- Sidebar Filters -->
+            <aside class="filter-sidebar">
+                <div class="filter-group">
+                    <h4>Categories</h4>
+                    <ul class="filter-list">
+                        <li><input type="checkbox" id="cat1"> <label for="cat1">Heavy Machinery</label></li>
+                        <li><input type="checkbox" id="cat2"> <label for="cat2">Electrical Parts</label></li>
+                        <li><input type="checkbox" id="cat3"> <label for="cat3">Pneumatic Systems</label></li>
+                        <li><input type="checkbox" id="cat4"> <label for="cat4">Safety Equipment</label></li>
+                    </ul>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <input type="range" min="0" max="50000" step="500" style="width: 100%;">
+                    <div class="d-flex justify-between mt-1">
+                        <span>$0</span>
+                        <span>$50,000</span>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Condition</h4>
+                    <ul class="filter-list">
+                        <li><input type="radio" name="cond" id="new"> <label for="new">Brand New</label></li>
+                        <li><input type="radio" name="cond" id="refurb"> <label for="refurb">Refurbished</label></li>
+                    </ul>
+                </div>
+
+                <button class="btn btn-primary w-full">Apply Filters</button>
+            </aside>
+
+            <!-- Product Display -->
+            <div class="product-listing">
+                <div class="listing-header d-flex justify-between mb-4">
+                    <p>Showing 1–12 of 48 results</p>
+                    <select class="p-2 bg-secondary border-color text-primary">
+                        <option>Default Sorting</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Latest Arrivals</option>
+                    </select>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-thumb">
+                            <img src="../assets/images/product-1.png" alt="Product">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Components</span>
+                            <h3 class="product-name"><a href="product.html">High-Precision Servo Motor</a></h3>
+                            <div class="product-price">$2,450.00</div>
+                            <div class="mt-2">
+                                <button class="btn btn-primary w-full">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeated for demo -->
+                    <div class="product-card">
+                        <div class="product-thumb"><img src="../assets/images/product-1.png" alt="Product"></div>
+                        <div class="product-info">
+                            <span class="product-category">Electronics</span>
+                            <h3 class="product-name">Industrial PLC Controller</h3>
+                            <div class="product-price">$1,899.00</div>
+                            <button class="btn btn-primary mt-2 w-full">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- ... more cards ... -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination mt-4 d-flex justify-center gap-2">
+                    <a href="#" class="btn btn-outline active">1</a>
+                    <a href="#" class="btn btn-outline">2</a>
+                    <a href="#" class="btn btn-outline">3</a>
+                    <a href="#" class="btn btn-outline"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as index) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">INDUSCORE</a>
+                    <p class="text-secondary">Premium industrial solutions since 1985.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Machinery</a></li>
+                        <li><a href="#">Tools</a></li>
+                        <li><a href="#">Automation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 IndusCore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

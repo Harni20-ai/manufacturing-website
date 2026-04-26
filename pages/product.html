@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-Precision Servo Motor | IndusCore</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .product-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xxl);
+            margin-top: var(--space-xl);
+        }
+        .product-gallery img {
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            width: 100%;
+        }
+        .gallery-thumbs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-md);
+        }
+        .gallery-thumbs img {
+            cursor: pointer;
+            opacity: 0.6;
+            transition: var(--transition-fast);
+        }
+        .gallery-thumbs img:hover { opacity: 1; }
+        .product-meta {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+        .product-tabs {
+            margin-top: var(--space-xxl);
+        }
+        .tab-headers {
+            display: flex;
+            gap: var(--space-xl);
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: var(--space-lg);
+        }
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            padding-bottom: var(--space-sm);
+            cursor: pointer;
+            position: relative;
+        }
+        .tab-btn.active {
+            color: var(--accent-primary);
+        }
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">INDUS<span class="text-accent">CORE</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i> 0</a>
+                <a href="account.html" class="btn btn-primary">My Account</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container section-padding">
+        <div class="breadcrumb text-secondary mb-4">
+            <a href="index.html">Home</a> / <a href="shop.html">Shop</a> / Servo Motor
+        </div>
+
+        <div class="product-detail">
+            <!-- Gallery -->
+            <div class="product-gallery">
+                <img src="../assets/images/product-1.png" alt="Servo Motor Main">
+                <div class="gallery-thumbs">
+                    <img src="../assets/images/product-1.png" alt="Thumb 1">
+                    <img src="../assets/images/product-1.png" alt="Thumb 2">
+                    <img src="../assets/images/product-1.png" alt="Thumb 3">
+                    <img src="../assets/images/product-1.png" alt="Thumb 4">
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="product-content">
+                <span class="text-accent font-bold">SKU: IND-9920-SM</span>
+                <h1 class="mt-1">High-Precision Industrial Servo Motor</h1>
+                <div class="product-rating text-accent mb-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span class="text-secondary ml-1">(42 Customer Reviews)</span>
+                </div>
+                
+                <div class="product-price h2">$2,450.00</div>
+                
+                <p class="text-secondary mt-3">
+                    Engineered for high-performance automation, the IndusCore Servo Motor provides unmatched torque and precision control for complex industrial applications.
+                </p>
+
+                <div class="product-options mt-4">
+                    <div class="qty-selector d-flex align-items-center gap-3">
+                        <label>Quantity:</label>
+                        <input type="number" value="1" min="1" class="p-2 bg-secondary border-color text-primary w-20">
+                    </div>
+                    <div class="mt-4 d-flex gap-2">
+                        <button class="btn btn-primary px-5">ADD TO CART</button>
+                        <button class="btn btn-outline"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+
+                <div class="product-meta mt-4">
+                    <p><strong>Category:</strong> Automation, Electronics</p>
+                    <p><strong>Tags:</strong> Motor, Precision, Industry 4.0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs Section -->
+        <div class="product-tabs">
+            <div class="tab-headers">
+                <button class="tab-btn active">Description</button>
+                <button class="tab-btn">Specifications</button>
+                <button class="tab-btn">Reviews (42)</button>
+            </div>
+            <div class="tab-content text-secondary">
+                <p>The IndusCore X-Series Servo Motor is designed to meet the rigorous demands of modern manufacturing. With integrated heat management and high-frequency response, it ensures stable operation even under peak loads.</p>
+                <ul class="mt-2">
+                    <li>Rated Torque: 5.0 Nm</li>
+                    <li>Max Speed: 3000 RPM</li>
+                    <li>Voltage: 480V AC</li>
+                    <li>IP Rating: IP65</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="related-products mt-xxl">
+            <h2 class="mb-4">Related <span>Components</span></h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-thumb"><img src="../assets/images/product-1.png" alt="Product"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">Digital Drive Controller</h3>
+                        <div class="product-price">$899.00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-thumb"><img src="../assets/images/product-1.png" alt="Product"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">Heavy Duty Coupling</h3>
+                        <div class="product-price">$145.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 IndusCore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
